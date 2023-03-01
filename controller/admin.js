@@ -46,7 +46,7 @@ const userlogin = async (req, res) => {
         res.status(500).send({ message: "Something went wrong" });
     }
 };
-const resetpassword =  async(req, res)=>{
+route.post('/userResetPassword/:id/:token', async(req, res)=>{
     const {password, confirm_password} =req.body;
      console.log(password,confirm_password);
      const {id,token}=req.params;
@@ -92,9 +92,9 @@ const resetpassword =  async(req, res)=>{
        })
      }
    
-   }
+   })
 
-const sendresetpassword = async(req,res)=>{
+route.post('/sendResetPassword',async(req,res)=>{
     
     const {email} =req.body;
     if(email){
@@ -137,7 +137,7 @@ const sendresetpassword = async(req,res)=>{
     }
 
 
-}
+})
 
 const checkadmin = (req,res) =>{
     try {
@@ -155,5 +155,5 @@ const savelogin = async (req, res) => {
 }
 
 module.exports = {
-    userlogin, usersignup, savelogin,resetpassword,checkadmin,sendresetpassword
+    userlogin, usersignup, savelogin
 };

@@ -15,7 +15,7 @@ let transporter = nodemailer.createTransport({
 // create reusable transporter object using the default SMTP transport
 
 
-module.exports = transporter 
+module.exports = transporter
 // AHARfrank@123 || AHARfrank123
 // ezvpwyfnbqtdkyek
 // frankbody123@gmail.com
